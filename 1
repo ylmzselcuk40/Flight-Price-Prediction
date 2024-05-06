@@ -1,0 +1,20 @@
+import numpy as np
+import pandas as pd
+
+pd.set_option('display.max_columns', None)
+pd.set_option('display.float_format', lambda x: '%.3f' % x)
+pd.set_option('display.width', 500)
+
+df_bus = pd.read_csv("MIULL/fight_pre/business.csv")
+df_eco = pd.read_csv("MIULL/fight_pre/economy.csv")
+df_clean = pd.read_csv("MIULL/fight_pre/Clean_Dataset.csv")
+
+df_clean.sort_values("price", ascending=False).head()
+
+df_bus.sort_values("price", ascending=False).head(100)
+
+df_eco.sort_values("price", ascending=False).head()
+
+# stoplar kontrol edilecek??
+# clean set ile diğerleri bağlantılı mı? Varsa bağlantı nedir?
+#
